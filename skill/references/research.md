@@ -43,7 +43,7 @@ Where the brief lives: tier 3 in the build's `research/` folder; tier 2 in the s
 2. **A skills registry.** For example `npx skills find "<mechanic>"`; open the top hits, registries print little description.
 3. **GitHub.** One search for the mechanic by name (`gh search repos "<mechanic>"`); a known URL is read through a plain page fetcher.
 
-Every tier runs all three on each mechanic the mode sweeps; tier 3 may fan them out. Knowledge mode sweeps only mechanics that are scripts or repeatable structures. Verdict per mechanic: whole / part / spark / **build it**.
+No network, or no registry reachable: run the inside sweep alone, say so in the brief, and record each mechanic as unsearched with the query you would have run, so a later build picks it up instead of assuming it was covered. Every tier runs all three on each mechanic the mode sweeps; tier 3 may fan them out. Knowledge mode sweeps only mechanics that are scripts or repeatable structures. Verdict per mechanic: whole / part / spark / **build it**.
 
 Why this rule exists: a YAML frontmatter parser was hand-rolled twice in one workspace, with a YAML library installed the whole time, and one of the two had a bug that false-failed more than half the files it checked. The earlier search had been for "skill builder", never "frontmatter parser".
 

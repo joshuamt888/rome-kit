@@ -35,7 +35,7 @@ User: "Add 1. Approve."
 
 **Locked goal:** one skill that turns a pasted intake transcript into a client folder holding a brief, a phase timeline, an open-questions list, and a draft first email in the studio's voice.
 
-**Done list:** 1. A real transcript produces four files in `Clients/<name>/`. 2. The brief names client, scope, budget range and deadline, each traced to a transcript line. 3. The timeline is phases with durations, no dates. 4. The email is a draft file, never sent. 5. A pasted text that is not an intake call does not fire the skill.
+**Done list:** 1. A real transcript produces four files in `Clients/<name>/`. 2. The brief names client, scope, budget range and deadline, each traced to a transcript line. 3. The timeline is phases with durations, no dates. 4. The email is a draft file, never sent. 5. From a fresh session, a pasted intake transcript starts the skill without naming it, and a pasted supplier quote does not.
 
 **Test set:** T1 last week's real intake call; T2 a transcript with no budget mentioned (the brief must say "not discussed"); T3 must not fire: a pasted supplier quote.
 
@@ -63,7 +63,7 @@ The builder writes the skill in `staging/`. Plan change 1: the email draft gets 
 
 ## Step 7 · Check the build
 
-First line of the gate: **4 of 5 done lines proven by output today; line 5 waits on the install (deferred).** T1 produced four files; T2's brief reads "Budget: not discussed"; T3 did not fire. The reviewer's table: lines 1 to 4 PASS with the file paths and quoted lines; line 5 DEFERRED. One fix from the review: the timeline had a date in it. Fixed, re-checked, user: "Approve."
+First line of the gate: **4 of 5 done lines proven by output today; line 5 waits on the install (deferred).** T1 produced four files; T2's brief reads "Budget: not discussed"; T3 did not fire on the staged copy, which proves the quiet half of line 5, while the trigger half needs the live install. The reviewer's table: lines 1 to 4 PASS with the file paths and quoted lines; line 5 DEFERRED. One fix from the review: the timeline had a date in it. Fixed, re-checked, user: "Approve."
 
 ## Step 8 · Ship
 

@@ -48,7 +48,7 @@ Rules: quote the exact line for every finding. Max 7 findings, most important fi
 End with exactly one line: "VERDICT: APPROVED" if no finding of type 1, 3, 4 or 6 is present, otherwise "VERDICT: REVISE".
 ```
 
-How to run it: fill the slots, write the prompt to a file, run the command with the build folder as the working directory (tier 1: the scratch folder), and read the verdict file yourself; never take a relayed summary.
+How to run it, by the DP-2 choice. **A, a second model:** fill the slots, write the prompt to a file, run the command with the build folder as the working directory (tier 1: the scratch folder), read the verdict file yourself. **B, a fresh sub-agent:** dispatch it with the prompt file and the build folder path only. **C, a fresh chat the user shuttles:** write the prompt to `checks/<step>-prompt.md`; the user opens a new chat, attaches or pastes the named files, pastes the prompt, and brings the reply back as `checks/<step>-verdict.md`. Under B and C the fresh eyes are only as fresh as what the prompt carries: the named files and nothing of this chat's reasoning. In every case, never take a relayed summary.
 
 ## Step 3 · Define review (optional)
 

@@ -1,6 +1,6 @@
 # Rome: an implementation kit
 
-This installs **Rome**, a build protocol for working with an AI assistant: eight steps, each ending at your gate, with your own words as the spec, so the AI builds what you asked and not what it guessed. Takes about 20 to 30 minutes to install, then 45 to 90 minutes for your first real build through all eight steps (author's estimate, not yet cold-tested). You end up with the protocol installed where your AI finds it, one line in your standing instructions so "let's build X" starts it, and one small real thing built and shipped under it.
+This installs **Rome**, a build protocol for working with an AI assistant: eight steps, each ending at your gate, with your own words as the spec, so the AI builds what you asked and not what it guessed. Takes about 20 to 30 minutes to install, then 45 to 90 minutes for your first real build through all eight steps (two cold tests ran the mechanics in about 7 minutes each; the rest is your reading and your answers). You end up with the protocol installed where your AI finds it, one line in your standing instructions so "let's build X" starts it, and one small real thing built and shipped under it.
 
 ## Where it lands
 
@@ -9,7 +9,7 @@ This installs **Rome**, a build protocol for working with an AI assistant: eight
 | `skill/` (SKILL.md + two references) | Your AI's skills folder (auto-discovering platforms) or `<workspace>/_tools/rome/` | DP-6 |
 | `templates/runs.md` | `<skill install path>/references/runs.md`, empty | DP-4 |
 | `templates/BUILD-STATUS.md`, `templates/NEXT-CHAT.md` | `<skill install path>/templates/`, then copied per build into that build's folder, under your own project convention or `<workspace>/builds/` | DP-1 |
-| Four short agent definitions (written by the installer, not shipped) | Your platform's agents folder | DP-3, only on platforms with sub-agents |
+| `templates/agents/` (four short agent definitions) | Your platform's agents folder | DP-3, only on platforms with sub-agents |
 | one line, not a file | Your standing-instructions file (`CLAUDE.md` / `AGENTS.md` / rules file) | Phase 2 step 5 |
 | Your first real build | Its own folder or your existing project's STATUS | Phase 3 |
 
@@ -63,7 +63,7 @@ Behind every gate, eight tripwires run silently (am I stating as decided somethi
 | `skill/SKILL.md` | The protocol itself, in portable agent-skill format |
 | `skill/references/prompts.md` | Every prompt Rome fires: red-team brief, plan review, evidence check, build review, findings format |
 | `skill/references/research.md` | The research brief template, the three tiers, the two sweeps, how borrowed work is graded |
-| `templates/` | A build STATUS, a hand-off file, a runs log; `templates/README.md` maps each to the decision that gates it |
+| `templates/` | A build STATUS, a hand-off file, a runs log, four agent definitions; `templates/README.md` maps each to the decision that gates it |
 
 ## What you end up with
 

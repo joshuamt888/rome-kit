@@ -43,7 +43,7 @@
 - [ ] Protocol installed at the DP-6 location (path recorded here)
 - [ ] `prompts.md` reviewer command adapted to DP-2 (or the paste note written)
 - [ ] `SKILL.md` edits for DP-1 and DP-5 applied and listed here
-- [ ] Agent definitions created (DP-3 A only)
+- [ ] Agent definitions installed from `templates/agents/` (DP-3 A only)
 - [ ] `runs.md` created, empty (DP-4 A or B)
 - [ ] Builds home created (DP-1 B only)
 - [ ] Wiring added to the standing-instructions file (file path recorded here)

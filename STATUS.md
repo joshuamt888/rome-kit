@@ -8,7 +8,7 @@
 |---|---|
 | Consent to read the workspace layout and instructions file given? | _pending_ |
 | Platform (files? shell? context-free sub-agent? persistent memory? context-usage number readable?) | _pending_ |
-| A second model callable read-only from the shell? | _pending_ |
+| A second model callable read-only from the shell (own / shuttled through the user / none)? | _pending_ |
 | Where the user's work lives (folder / vault / repo) | _pending_ |
 | Existing standing-instructions file (path) | _pending_ |
 | Existing project convention (do projects carry a STATUS or README?) | _pending_ |
@@ -37,6 +37,7 @@
 - [ ] Scan results recorded above
 
 ### Phase 1: Decisions
+- [ ] User oriented with `EXAMPLE-BUILD.md` before the first decision
 - [ ] DP-1 through DP-6 decided and recorded above
 
 ### Phase 2: Install

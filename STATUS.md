@@ -20,12 +20,12 @@
 
 | # | Decision | Choice | Notes |
 |---|---|---|---|
-| DP-1 | Where a build's paper lives | _pending_ | |
-| DP-2 | Who the second reviewer is | _pending_ | |
-| DP-3 | Sub-agents or one thread | _pending_ | |
-| DP-4 | Feedback loop depth | _pending_ | |
-| DP-5 | How a long build survives a full chat | _pending_ | |
-| DP-6 | Install location and name | _pending_ | |
+| DP-1 | Where a build's paper lives | **A**, the vault's project convention | Tier 3 = `projects/<slug>/` with the standard file set (README, STATUS, History/, NEXT-CHAT); tier 2 = Define + plan in the STATUS of the project it changes; tier 1 = runs-log row only. Catch-all for a small build no project owns: `projects/_builds/STATUS.md`. Decided 2026-09-17 |
+| DP-2 | Who the second reviewer is | **B**, a fresh Claude sub-agent | No second vendor CLI on either Mac. `checker` agent, strongest model, high effort, gets only the locked goal, done list and plan. Gate lines always say what ran. Switch to A = one block edit in `prompts.md` if a Codex/Gemini CLI is ever installed. Decided 2026-09-17 |
+| DP-3 | Sub-agents or one thread | **A**, four named sub-agents | `researcher`, `builder`, `grep-reader` on a mid-cost model (Sonnet 5; medium/medium/low effort), `checker` on the strongest (Fable 5.1, high). Installed to `~/.claude/agents/` on BOTH Macs (outside the vault, tripwire 3). Fan-out capped per plan; never more fixture agents than test cases; cheapest tier never without Josh's permission. Decided 2026-09-17 |
+| DP-4 | Feedback loop depth | **A**, loop on, default 3 | Runs log at `<skill>/references/runs.md`; row + rule re-read + day-later fresh read. Josh can answer 1 at any close line. Decided 2026-09-17 |
+| DP-5 | How a long build survives a full chat | **B**, retire by structure | No percent-of-window number is readable in Claude Code (only a remaining-token budget). SKILL.md § 3 percentage ladder replaced with: retire at every hand-off point the plan names, never more than two steps past step 5 in one chat. Hand-off file = the project's `NEXT-CHAT.md` (existing convention). Decided 2026-09-17 |
+| DP-6 | Install location and name | **A+B**, vault skill + symlink; name **Rome**; trigger **narrow** | Skill at `~/steady-brain/skills/shared/rome/` (SKILL.md, references/, templates/), synced by Obsidian; symlinked to `~/.claude/skills/rome` on BOTH Macs. Triggers: "Rome", "build mode", "/rome", "step back on X", mid-flight re-entry. NOT "let's build X" (superpowers brainstorming/writing-plans keep it). No name collision in the vault. Decided 2026-09-17 |
 
 ## Tasks
 
@@ -37,8 +37,8 @@
 - [x] Scan results recorded above
 
 ### Phase 1: Decisions
-- [ ] User oriented with `EXAMPLE-BUILD.md` before the first decision
-- [ ] DP-1 through DP-6 decided and recorded above
+- [x] User oriented with `EXAMPLE-BUILD.md` before the first decision
+- [x] DP-1 through DP-6 decided and recorded above
 
 ### Phase 2: Install
 - [ ] Protocol installed at the DP-6 location (path recorded here)

@@ -6,15 +6,15 @@
 
 | Check | Finding |
 |---|---|
-| Consent to read the workspace layout and instructions file given? | _pending_ |
-| Platform (files? shell? context-free sub-agent? persistent memory? context-usage number readable?) | _pending_ |
-| A second model callable read-only from the shell (own / shuttled through the user / none)? | _pending_ |
-| Where the user's work lives (folder / vault / repo) | _pending_ |
-| Existing standing-instructions file (path) | _pending_ |
-| Existing project convention (do projects carry a STATUS or README?) | _pending_ |
-| How the platform discovers skills (auto-loaded directory / rules-file reference / paste-only) | _pending_ |
-| Existing skills Rome would call at step 6 (skill-structuring, pack-building, kit-export, voice) | _pending_ |
-| A search index that needs refreshing after file moves? | _pending_ |
+| Consent to read the workspace layout and instructions file given? | Yes, 2026-09-17, Josh: "get it on both devices but lets also start with step one" |
+| Platform (files? shell? context-free sub-agent? persistent memory? context-usage number readable?) | Claude Code (Fable 5.1) on two Macs: MacBook Air (Josh) and Mac mini (Jarvis, agents, reachable by SSH from the Air). Files yes · shell yes · fresh-context sub-agents yes (Agent tool, per-agent model + effort) · persistent memory yes (auto-memory + claude-mem) · context number: a remaining-token counter is visible in-session, not a percent-of-window from a file |
+| A second model callable read-only from the shell (own / shuttled through the user / none)? | None confirmed. No codex/gemini/opencode/ollama on PATH. `aider` is installed (Python 3.9 user bin) but its model and API key are unverified. Fallback: fresh Claude sub-agent (DP-2 B) |
+| Where the user's work lives (folder / vault / repo) | Obsidian vault `~/steady-brain` on both Macs (Obsidian Sync). Code in `~/repos` on each machine, not synced. Never `~/Documents` (iCloud) |
+| Existing standing-instructions file (path) | `~/steady-brain/CLAUDE.md` (a router, one route line per topic; rule 8: new knowledge goes in a depth file). No `~/.claude/CLAUDE.md` |
+| Existing project convention (do projects carry a STATUS or README?) | Yes, strict: `projects/<name>/` with README (identity), STATUS (state only), History/LOG, History/LESSONS, NEXT-CHAT (on retire). 16 projects, all carry both. Template in `projects/(PROJECT TEMPLATE)`. Tasks tagged #ai/#assist/#decide/#manual/#call. A Stop hook (retire-gate) blocks a session that edited STATUS without a LOG entry |
+| How the platform discovers skills (auto-loaded directory / rules-file reference / paste-only) | Auto-loaded from `~/.claude/skills/` on both Macs. Vault folder skills (`skills/shared/<name>/SKILL.md`) are symlinked there on both machines; the symlink itself does not sync (tripwire 3) |
+| Existing skills Rome would call at step 6 (skill-structuring, pack-building, kit-export, voice) | skill-creation (skill structuring) · build-expertise (knowledge packs) · terraform (kit export) · josh-voice (`skills/shared/josh-voice.md`, anything sent in Josh's name). Also installed and overlapping on the "let's build" trigger: superpowers brainstorming / writing-plans / executing-plans / verification-before-completion, and ponytail (minimal-code discipline) |
+| A search index that needs refreshing after file moves? | Yes, qmd over the vault. Nightly LaunchAgent at 2am runs `qmd update && qmd embed && qmd cleanup`; run the same by hand after a build moves files |
 
 ## Decisions (Phase 1)
 
@@ -30,11 +30,11 @@
 ## Tasks
 
 ### Phase 0: Environment scan
-- [ ] Consent asked and given
-- [ ] Platform + capabilities identified
-- [ ] Workspace located (or chat-only path confirmed)
-- [ ] Existing conventions and instructions file read
-- [ ] Scan results recorded above
+- [x] Consent asked and given
+- [x] Platform + capabilities identified
+- [x] Workspace located (or chat-only path confirmed)
+- [x] Existing conventions and instructions file read
+- [x] Scan results recorded above
 
 ### Phase 1: Decisions
 - [ ] User oriented with `EXAMPLE-BUILD.md` before the first decision

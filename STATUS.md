@@ -67,7 +67,7 @@
 
 | First build | |
 |---|---|
-| What it was + tier | _pending_ |
+| What it was + tier | iMessage read-and-digest section in `skills/shared/imessage.md`, tier 1, knowledge mode. Steps 1–4 approved; Josh shelved it at step 5 ("imessage skill works perfectly, just shelf it for now"). Nothing shipped; scratch deleted; one runs.md row. Phase 3 stays open for the next real build |
 | Where its paper lives | _pending_ |
 | Trigger sentence used, and did it fire? | _pending_ |
 | Cold-read answer (one line) | _pending_ |
@@ -80,4 +80,4 @@
 
 ## Blockers
 
-- none
+- Phase 3 not completed: first build shelved by Josh at step 5 on 2026-09-17. Verification tests 1 and 2 not yet run. Next real build (tier 1 or 2) completes Phase 3.

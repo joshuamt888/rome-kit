@@ -41,22 +41,22 @@
 - [x] DP-1 through DP-6 decided and recorded above
 
 ### Phase 2: Install
-- [ ] Protocol installed at the DP-6 location (path recorded here)
-- [ ] `prompts.md` reviewer command adapted to DP-2 (or the paste note written)
-- [ ] `SKILL.md` edits for DP-1 and DP-5 applied and listed here
-- [ ] Agent definitions installed from `templates/agents/` (DP-3 A only)
-- [ ] `runs.md` created, empty (DP-4 A or B)
-- [ ] Builds home created (DP-1 B only)
-- [ ] Wiring added to the standing-instructions file (file path recorded here)
+- [x] Protocol installed at the DP-6 location (path recorded here)
+- [x] `prompts.md` reviewer command adapted to DP-2 (or the paste note written)
+- [x] `SKILL.md` edits for DP-1 and DP-5 applied and listed here
+- [x] Agent definitions installed from `templates/agents/` (DP-3 A only)
+- [x] `runs.md` created, empty (DP-4 A or B)
+- [x] Builds home created (DP-1 B only) — n/a under A; catch-all `projects/_builds/` created instead
+- [x] Wiring added to the standing-instructions file (file path recorded here)
 
 | Install paths | |
 |---|---|
-| Protocol (`SKILL.md`) | _pending_ |
-| Runs log | _pending_ |
-| Agent definitions | _pending_ / n/a |
-| Builds home | _pending_ / n/a |
-| Instructions file edited | _pending_ |
-| Edits made to `SKILL.md` / `prompts.md` | _pending_ |
+| Protocol (`SKILL.md`) | `~/steady-brain/skills/shared/rome/SKILL.md` (vault, Obsidian-synced) + symlink `~/.claude/skills/rome` on the Air and the mini |
+| Runs log | `~/steady-brain/skills/shared/rome/references/runs.md` |
+| Agent definitions | `~/.claude/agents/{researcher,builder,grep-reader}.md` model `sonnet` (effort medium/medium/low), `checker.md` model `fable` effort high; on BOTH Macs |
+| Builds home | n/a (DP-1 A). Catch-all `~/steady-brain/projects/_builds/STATUS.md` + `History/LOG.md` (retire-gate hook requires the LOG) |
+| Instructions file edited | `~/steady-brain/CLAUDE.md`, one route-table row after "Starting a new project"; also one line in `skills/README.md` |
+| Edits made to `SKILL.md` / `prompts.md` | SKILL.md: vault seven-field frontmatter added; description narrowed (no "let's build X"); § 1 catch-all → `projects/_builds/STATUS.md` + note that tier 3 uses the vault project convention; § 3 percentage ladder → retire-by-structure sentence; orchestrator line names the four agents. prompts.md: codex command block → "dispatch `checker`" note. templates/BUILD-STATUS.md: frontmatter → vault fields. research.md, NEXT-CHAT.md, runs.md unchanged |
 
 ### Phase 3: First live run
 - [ ] Build chosen with the user (small, real); tier and mode stated
